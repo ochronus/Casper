@@ -62,6 +62,7 @@ function js(done) {
     pump([
         src([
             // pull in lib files first so our own code can depend on it
+            'node_modules/jquery/dist/jquery.js',
             'assets/js/lib/*.js',
             'assets/js/*.js'
         ], {sourcemaps: true}),
